@@ -6,6 +6,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.hateoas.server.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,6 +38,10 @@ public class UserController {
 		if(findOne == null) {
 			throw new UserNotFoundException(String.format("User %d not found" , userId));
 		}
+		
+		// HATEOAS
+		// along with User, pass the link to retrieve list of all-user
+//		ControllerLinkBuilder.linkTo(methodOn(this.getClass())))
 		return findOne;
 	}
 	
