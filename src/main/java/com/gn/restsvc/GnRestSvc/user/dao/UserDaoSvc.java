@@ -17,9 +17,9 @@ public class UserDaoSvc {
 	private static int userCounts = 3;
 
 	static {
-		userList.add(new User(1, "Gaurav", LocalDate.of(1987, 07, 06)));
-		userList.add(new User(2, "Ravi", LocalDate.of(1987, 04, 06)));
-		userList.add(new User(3, "Tom", LocalDate.of(1987, 07, 07)));
+//		userList.add(new User(1, "Gaurav", LocalDate.of(1987, 07, 06)));
+//		userList.add(new User(2, "Ravi", LocalDate.of(1987, 04, 06)));
+//		userList.add(new User(3, "Tom", LocalDate.of(1987, 07, 07)));
 	}
 
 	public List<User> findAll() {
